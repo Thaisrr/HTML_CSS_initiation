@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Modifier le texte en CSS</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Courgette&family=Raleway&display=swap');
+        /*
+            font-family: 'Courgette', cursive;
+            font-family: 'Raleway', sans-serif;
+        */
+
+        /* Importer une police téléchargée */
+        @font-face {
+            font-family: 'OpenDys';
+            src: url("assets/fonts/opendys/OpenDyslexicAlta-Regular.otf");
+        }
+
+        body {
+            font-size: 30px;
+        }
+
+        header {
+            font-size: 60px;
+        }
+
+        p {
+            font-family: 'OpenDys', sans-serif;
+        }
+
+        h1 {
+            color: #fff; /* nom de couleur | hexadecimal | RGB(a) | HSL(a) */
+            background-color: #A30018;
+            font-family:'Courgette', Arial, Ubuntu, cursive;
+            /* sans-serif, serif, monospace, fantasy, cursive */
+            font-size: 5cm;
+            /*
+            Les tailles de police :
+            px : relativement fixe
+            em : 1em = 1 fois la taille du parent ( si pas de parent, body )
+            % : 100% = 1em = 1* la taille du parent
+            rem : root em : 1rem = 1* la taille de police ":root" ( du navigateur )
+            ( tailles prédéfinies : small, xx-small, ... )
+
+            Mais aussi : le cm, le pc, ..
+             */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Modifier le texte en CSS</h1>
+    </header>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa dicta, ducimus esse excepturi expedita harum illo, ipsum nobis non nulla quis voluptates! Commodi culpa earum modi nisi nobis, repellendus! Omnis.</p>
+
+</body>
+</html>

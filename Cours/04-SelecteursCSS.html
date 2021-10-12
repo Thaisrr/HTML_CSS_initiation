@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Modifier le texte en CSS</title>
+    <style>
+        /* Ici, c'est du css */
+
+        body {
+            color: blue;
+        }
+
+        * {
+            color: gold;
+        }
+
+        h1 {
+            color: red;
+        }
+
+        p {
+            color: chartreuse;
+        }
+
+        p {
+            color: blueviolet;
+        }
+
+        .blue {
+            color: blue;
+        }
+
+        .center {
+            text-align: center;
+            color: tomato;
+        }
+
+
+        /* Selecteurs CSS :
+              - sauf indication contraire ( style par défaut ou réécriture )
+                -> Les enfants seront aussi (un peu) modifiés ( pour les modifications de texte )
+
+        nom de balise :
+            h1 {}
+            - Selectionne tous les éléments ayant cette balise
+            - Utilisé pour du code très général
+
+        les classes :
+            .center {}
+
+        Les id :
+            #nomId {}
+
+       */
+
+    </style>
+    <link href="style/rappels.css" rel="stylesheet">
+
+</head>
+<body>
+
+<h1 class="center blue">Les bases du <span>CSS</span></h1>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aut culpa cumque debitis dolor dolorem eius inventore, laborum necessitatibus non, nulla quasi, reprehenderit tempora? Architecto blanditiis hic illum quibusdam velit.</p>
+<p class="center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aut culpa cumque debitis dolor dolorem eius inventore, laborum necessitatibus non, nulla quasi, reprehenderit tempora? Architecto blanditiis hic illum quibusdam velit.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aut culpa cumque debitis dolor dolorem eius inventore, laborum necessitatibus non, nulla quasi, reprehenderit tempora? Architecto blanditiis hic illum quibusdam velit.</p>
+
+<div>Div de test</div>
+
+
+</body>
+</html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- Encodage des caractères : -->
+    <meta charset="UTF-8">
+    <title>Titre de la page</title>
+</head>
+<body>
+
+    <!-- Ici le contenu de la page -->
+
+    <!-- p : paragraphe
+     <br/> -> A ne pas utiliser dans les paragraphes !!!!!!!!
+
+     -->
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Aliquam at eligendi fuga laborum qui quis unde veritatis voluptates.
+        Accusantium aperiam asperiores consequuntur cumque earum, impedit
+        ipsa nam nostrum quo rerum.
+    </p>
+    <br/>
+
+    <!-- HTML 5 moche ( permissif ) -->
+    <P hidden ClaSS="maclasse">Mon p moche</P>
+    <hr>
+    <!-- XHTML -->
+    <p hidden="hidden">Mon p propre</p>
+    <hr/>
+
+
+    <!-- Les titres -->
+    <h1>Mon titre principal</h1>
+    <!-- H1 : le titre principal de la page,
+    Permet de savoir ce qu'on trouve dans la page :
+    - Titre de l'article sur un blog ou un journal,
+    - Inscription / Connexion,
+    ...
+    - UN SEUL (VISIBLE) H1 PAR PAGE !
+    -->
+    <h2>Titre secondaire</h2>
+
+    <h3>Titre tertiaire</h3>
+    <h6>Titre de moindre importance</h6>
+
+
+    <p>
+        A l'interieur d'un paragraphe, on peut retrouver des balises de "texte" :
+        <span> le span : ne fait rien, juste pour encadrer un bout de texte, </span>
+        <strong> strong : met du texte en gras, + mots clefs pour le SEO, </strong>
+        <b> b pour bold : texte en gras </b>
+        <u> u : underline, pour souligner, </u>
+        <a> a : ancre,  pour les liens, </a>
+        <mark>mark : pour surligner,  </mark>
+        <i> i, italic ,</i>
+        <em> em , emphase : mots clefs pour le SEO ( + italique ) </em>
+        <sup>Sup, supérieur pour mettre en exposant, </sup>
+        <sub>Sub, pour mettre en indice, </sub>
+        <s>S pour barrer du texte </s>
+        <q>Q ou quote, citation dans le texte, </q>
+    </p>
+
+    <!-- Toute ces balises sont des balises qui ne peuvent exister que dans un parent :
+    ( un paragraphe par exemple )
+    Ce sont des balises de texte, qui ont un comportement différent des balises block
+    -->
+
+    <!-- Search Engine Optimisation :
+    Optimisation pour les moteurs de recherche,
+    pour améliorer le référencement naturel
+    ( Arriver en haut de google )
+    -->
+
+    <!--
+    div
+    ol / li
+    blockquote
+    -->
+
+    <div>
+        Div : division, pas de valeur sémantique,
+        assez peu de style par défaut,
+        servent essentiellement à diviser ou encadrer des blocks pour le style
+    </div>
+
+    <!-- Balises sémantiques : -->
+
+    <header>Entête de page :
+    - Balise encadrante, avec une valeur sémantique
+        - 2 rôles :
+            - Soit, à la racine, dans ce cas, entête de la page, unique
+            - Soit on s'en sert pour découper des blocks de contenu,
+    </header>
+
+
+    <main>
+        - Contenu principal de la page
+        -> Ce que l'user est venu chercher
+        -> Contenu unique,
+        -> Une seule balise main visible par page
+    </main>
+
+    <aside>
+        - Contenu secondaire ou complémentaire
+            - éléments, ou des liens en rapport avec le main
+    </aside>
+
+    <nav>
+        - Groupe de liens de navigation
+            - navbar / menu
+    </nav>
+
+    <footer>
+        - Pied de page,
+        -> Soit pour la page en elle même
+        -> Soit le footer d'un article, d'une carte, d'un contenu...
+    </footer>
+
+
+    <!-- Les listes : -->
+    <!-- Listes non ordonnées ( ul : unordered list ) -->
+    <ul>
+        <li>li : List Item</li>
+        <li>Coucou</li>
+        <li>Hello World</li>
+    </ul>
+
+    <!-- Listes ordonnées : ( ol : ordered list )
+    attributs :
+        - reversed ( l'ordre de la numérotation sera inversé
+        - start : l'entier a partir duquel on commence la numérotation
+        - type : le type de numérotation 1, a, A, I, i
+            -> Il faut préférer passer par le CSS pour modifier le type
+            de numérotation, sauf si la numérotation a une importance particulière
+            pour le sens du document.
+    -->
+    <ol start="1" type="a">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ol>
+
+    <!--
+    dans les <nav>, ce qui est présenté, c'est une liste de liens
+    -> Dès qu'il y une navigation, on la présente en liste
+    ( modifiable en CSS )
+    -->
+
+
+    <ol>
+        <li>Option 1</li>
+        <li>Option 2
+            <ol type="a">
+                <li>Sous-opt 1</li>
+                <li>Sous-opt 2</li>
+                <li> Sous-opt 3
+                    <ul>
+                        <li>Truc</li>
+                        <li>Truc</li>
+                        <li>Truc</li>
+                    </ul>
+                </li>
+            </ol>
+        </li>
+        <li>Option 3</li>
+    </ol>
+
+
+    <hr>
+
+   <figure>
+       <blockquote cite="https://www.mon-poeme.fr/citations-guillaume-apollinaire/">
+           <p> Il est des loups de toute sorte je connais le plus inhumain,
+               mon cœur que le diable l'emporte et qu'il le dépose à sa porte n'est plus
+               qu'un jouet dans sa main. </p>
+       </blockquote>
+       <figcaption>
+           Guillaume Apollinaire
+           <cite>Caligrammes, C'est Lou qu'on la nommait</cite>
+           (1918)
+       </figcaption>
+   </figure>
+
+    <figure>
+        <img
+            src="https://www.supersoluce.com/sites/default/files/logo1/the_witcher_3_by_sgo_manator-d7y5hmx.jpg"
+            alt="Description de l'image"
+            width="300"
+        >
+        <figcaption>Ciri, du jeu "The Witcher 3"</figcaption>
+    </figure>
+
+<div>
+    <img
+            src="https://www.supersoluce.com/sites/default/files/logo1/the_witcher_3_by_sgo_manator-d7y5hmx.jpg"
+            alt="Description de l'image"
+    >
+</div>
+
+<!-- figures :
+- citations, images, diagrammes, bouts de code....
+figcation ( légende ) : non obligatoire
+-->
+
+<div>
+    <p>Dans un paragraphe ou n'importe quelle autre balise,
+    on peut passer à la ligne, faire des      gros espaces, ect...
+    Mais ce ne sera pas pris en compte. </p>
+    <pre>Dans la balise pre
+        La mise en page      est
+        gardée
+    </pre>
+</div>
+
+
+<!-- Les liens : ----->
+
+<!-- Groupe de liens : dans <nav> et dans une liste
+( pas si c'est un lien incorporé au texte
+-->
+
+<ul>
+    <li>
+        <a href="https://www.dawan.fr" target="_blank">Lien externe</a>
+    </li>
+    <li>
+        <a href="01-Rappels.html">Lien interne</a>
+    </li>
+    <li>
+        <a href="mailto:trevillon@jehann.fr">trevillon@jehann.fr</a>
+    </li>
+    <li>
+        <a href="tel:0900000000">09 00 00 00 00</a>
+    </li>
+    <li>
+        <a href="ressource.txt" download="ressource.txt">Téléchargement</a>
+    </li>
+</ul>
+
+</body>
+</html>

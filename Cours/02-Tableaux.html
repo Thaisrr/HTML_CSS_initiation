@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Les tableaux</title>
+</head>
+<body>
+
+<h1>Les tableaux</h1>
+
+<main>
+    <h2>Tableau Simple</h2>
+
+    <table border="1"> <!-- le tableau -->
+        <tr>
+            <th>Nb1</th> <!-- th : table header : entêtes de tableaux -->
+            <th>Nb2</th>
+            <th>Nb3</th>
+        </tr>
+        <tr> <!-- tr : row = ligne de tableau -->
+            <td>1</td> <!-- td : table data ( données -->
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr> <!-- tr : row = ligne de tableau -->
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+        </tr>
+    </table>
+
+    <h2>Tableau "bien ordonné"</h2>
+
+    <!-- Attention : non compatible avec IE  -->
+    <details>
+        <summary>Résumé du tableau</summary>
+        <p>Mon panier : il y x articles dans le panier.....</p>
+    </details>
+
+    <table border="1">
+        <caption>Mon panier</caption>
+        <colgroup>
+            <col class="col1"> <!-- colonne 1 -->
+            <col style="background: aquamarine" span="2"> <!-- colonnes 2 et 3 -->
+        </colgroup>
+        <thead>
+            <tr>
+                <th scope="col">Produit</th>
+                <th scope="col">Quantité</th>
+                <th scope="col">Prix</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="2">Pommes</td>
+                <td>3kg</td>
+                <td>2€</td>
+            </tr>
+            <tr>
+                <td>6kg</td>
+                <td>4€</td>
+            </tr>
+            <tr>
+                <td>Coings</td>
+                <td>1kg</td>
+                <td>3€</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th colspan="2">Total</th>
+                <td>5€</td>
+            </tr>
+        </tfoot>
+    </table>
+
+</main>
+
+</body>
+</html>

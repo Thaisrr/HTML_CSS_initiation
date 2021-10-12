@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Les Formulaires</title>
+</head>
+<body>
+
+<h1>Les formulaires</h1>
+
+<!--
+Action : url pour traiter le formulaire
+Méthode : méthode HTTP d'envoie du formulaire : GET, POST
+    -> Post : la plupart du temps
+    -> Get : récupérer des données ( barre de recherche )
+-->
+<form >
+    <div>
+        <label for="i_nom">Nom</label>
+        <input id="i_nom" name="i_nom"
+               required="required"
+               minlength="2"
+               maxlength="100"
+               pattern="^[a-zA-ZÀ-ÖØ-öø-ÿ\-\ ]$"
+        >
+    </div>
+    <div>
+        <label for="i_email">Email</label>
+        <input id="i_email" name="i_email" type="email" required>
+        <!--
+        Type : prés vérification du navigateur
+        + indications pour Synthèses vocales
+        -->
+    </div>
+    <div>
+        <label for="phone">Téléphone</label>
+        <input type="tel" id="phone">
+        <!--
+        type tel, type url => pas de vérif du navigateur
+        Mais ouverture du clavier le plus adapté sur téléphone
+        -->
+    </div>
+    <div>
+        <label for="nb">Quantité</label>
+        <input type="number" id="nb" min="0" max="100" step="10">
+    </div>
+    <div>
+        <label for="nb2">Quantité</label>
+        <input type="range" id="nb2" min="0" max="100" step="10">
+    </div>
+
+    <div>
+        <label for="date">Date de livraison</label>
+        <input id="date" type="date" min="2021-10-13" max="2021-11-13">
+        <!-- min max : format YYYY-mm-jj -->
+    </div>
+    <div>
+        <label for="hour">Heure de livraison</label>
+        <input type="time" id="hour">
+    </div>
+
+    <div>
+        <label for="pet">Quel est votre animal préféré ?</label>
+        <select id="pet">
+            <optgroup label="Animaux domestiques">
+                <option value="croco">Alligator commun</option>
+                <option value="shark">Requin Marteau</option>
+                <option value="truc">Mante Religieuse venimeuse</option>
+            </optgroup>
+            <optgroup label="Animaux sauvages">
+                <option value="unicorn">Licorne</option>
+                <option value="fish">Poisson Clown</option>
+            </optgroup>
+        </select>
+    </div>
+
+
+        <fieldset>
+            <legend>Choix des crudités</legend>
+            <p>
+                <input name="veggies" value="salad" type="checkbox" id="salad">
+                <label for="salad">Salade</label>
+            </p>
+            <p>
+                <input name="veggies" value="tomato" type="checkbox" id="tomato">
+                <label for="tomato">Tomate</label>
+            </p>
+            <p>
+                <input name="veggies" value="onion" type="checkbox" id="onion">
+                <label for="onion">Oignons</label>
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Livraison</legend>
+            <p>
+                <input type="radio" name="liv" value="site" id="site">
+                <label for="site">Sur place</label>
+            </p>
+            <p>
+                <input type="radio" name="liv" value="away" id="away">
+                <label for="away">A emporter</label>
+            </p>
+        </fieldset>
+
+        <div>
+            <label for="msg">Un petit message ?</label>
+            <textarea id="msg">Hello !</textarea>
+        </div>
+    <div>
+        <input aria-label="recherche" type="search" placeholder="Exemple: ....">
+    </div>
+    <div>
+        <button type="submit">Envoyer</button>
+        <button type="reset">Réinitialiser</button>
+    </div>
+</form>
+
+
+
+</body>
+</html>
