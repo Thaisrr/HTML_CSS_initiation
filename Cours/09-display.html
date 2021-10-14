@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Les Pseudos Selecteurs</title>
+    <style>
+
+        /*
+        Display : le type d'élément :
+        "block" ( boxes / boite )
+            -> article, div, h*, main, p, header, ...
+            -> balises "englobante", de structure
+            -> se positionnent les unes en dessous des autres, le plus en haut à gauche possible
+        "inline" ( texte ) -> a, span, b, i, sup, sub, mark....
+            -> Des balises qui servent à viser le texte
+                - On ne peut pas donner de hauteur ou de largeur à du texte
+                    -> font-size
+                - Le texte visé est un bout de paragraphe, donc il s'aligne avec le reste du texte
+                - On NE PEUT PAS centrer une balise inine avec les margins auto
+                    -> Il faut mettre TEXT-ALIGN : CENTER sur le PARENT !!!!!
+
+               -> Inline-block ( médias, images, boutons, inputs )
+                       -> Se comportent comme des balises inline
+                       -> A la différence, qu'on peut les redimensionner
+
+        -> Display : block | inline | inline-block
+         */
+
+        .p {
+            width: 600px;
+            margin: 50px auto;
+            padding: 30px;
+            border: solid crimson 2px;
+        }
+        .span {
+            border: #28546a solid;
+            width: 500000px;
+            height: 500000px;
+            margin: 0 20px;
+            padding: 10px;
+        }
+
+        .image-container {
+            border: #A30018 solid;
+        }
+
+        .image-container img {
+            width: 300px;
+        }
+
+        .block-image {
+            width: 400px;
+            height: 200px;
+            margin: 100px auto;
+            border: chartreuse solid 5px;
+            overflow: hidden;
+        }
+
+        .block-image img {
+            width: 100%;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+
+<h1>Le Display</h1>
+
+
+
+<p class="p"><span class="span">avec un span</span></p>
+
+<div class="image-container">
+    <img src="https://www.wallpapertip.com/wmimgs/30-308463_34027-funny-cat-with-big-glasses-gato-galxia.jpg">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmeRv-SEjtfwHfx2LkBf8NzWeaTvV2UlIHCj7j1FMOWY8bWk0iPnwSBDGr2OpVPR5fBa4&usqp=CAU">
+</div>
+
+
+<div class="block-image">
+    <img src="https://i.pinimg.com/736x/3f/95/3e/3f953ed168ba7a6a622fe05f5c971144--galaxy-space-the-galaxy.jpg">
+</div>
+
+</body>
+</html>

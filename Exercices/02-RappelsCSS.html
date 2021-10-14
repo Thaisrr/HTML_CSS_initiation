@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exo : Rappels CSS</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Trade+Winds&display=swap');
+
+/*** Entête *************************************/
+        .header-list {
+            color: darkgreen;
+            list-style: square;
+        }
+        h1 {
+            background-color: chartreuse;
+            text-align: center;
+            text-shadow: 0 3px 10px red;
+            font-family: 'Trade Winds', cursive;
+        }
+
+
+ /**** Main **********************************/
+    .article {
+        border: solid goldenrod 4px;
+    }
+
+    /* Tous les <p> à l'intérieur d"un élément ayant la classe article */
+    .article p {
+        text-align: right;
+        font-family: sans-serif;
+        color: lime;
+        text-decoration: line-through wavy aqua;
+    }
+
+    /* nth-child : chaque p qui le *eme enfant de .article
+     2n ( even ) = 1 sur deux */
+    .article p:nth-child(2n) {
+         color: aqua;
+        text-decoration: line-through dotted lime;
+    }
+
+    footer .p1 {
+        color: goldenrod;
+        text-indent: 30px;
+    }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <ul class="header-list">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+    <h1 id="title">Mon super titre</h1>
+</header>
+
+<main>
+    <article class="article">
+        <h2>Article 1</h2>
+        <p class="p1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque consequatur deleniti dolorum eveniet mollitia odit quis repellat saepe unde! Assumenda at beatae eos error excepturi exercitationem nihil placeat sapiente similique?</p>
+        <p class="p2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque consequatur deleniti dolorum eveniet mollitia odit quis repellat saepe unde! Assumenda at beatae eos error excepturi exercitationem nihil placeat sapiente similique?</p>
+        <p class="p1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque consequatur deleniti dolorum eveniet mollitia odit quis repellat saepe unde! Assumenda at beatae eos error excepturi exercitationem nihil placeat sapiente similique?</p>
+        <p class="p2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque consequatur deleniti dolorum eveniet mollitia odit quis repellat saepe unde! Assumenda at beatae eos error excepturi exercitationem nihil placeat sapiente similique?</p>
+    </article>
+    <article class="article">
+        <h2>Article 2</h2>
+        <p class="p1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque consequatur deleniti dolorum eveniet mollitia odit quis repellat saepe unde! Assumenda at beatae eos error excepturi exercitationem nihil placeat sapiente similique?</p>
+        <p class="p2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque consequatur deleniti dolorum eveniet mollitia odit quis repellat saepe unde! Assumenda at beatae eos error excepturi exercitationem nihil placeat sapiente similique?</p>
+        <p class="p1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque consequatur deleniti dolorum eveniet mollitia odit quis repellat saepe unde! Assumenda at beatae eos error excepturi exercitationem nihil placeat sapiente similique?</p>
+        <p class="p2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque consequatur deleniti dolorum eveniet mollitia odit quis repellat saepe unde! Assumenda at beatae eos error excepturi exercitationem nihil placeat sapiente similique?</p>
+    </article>
+</main>
+<footer>
+    <p class="p1">Dawan - 2021</p>
+</footer>
+</body>
+</html>

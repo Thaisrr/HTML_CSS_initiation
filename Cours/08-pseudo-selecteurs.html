@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Les Pseudos Selecteurs</title>
+    <style>
+        /* Survol de la souris */
+        h1:hover {
+            color: #A30018;
+        }
+
+        /* Buttons :
+        - survol
+        - au clic : actif
+        - focus
+        */
+
+        button {
+            background-color: white;
+            border: solid 3px #A30018;
+            color: #A30018;
+            font-size: 1.2em;
+            padding: 5px;
+            font-family: sans-serif;
+            box-shadow: 1px 2px 5px #9a9a9a99;
+            transition-property: background-color, color, border-radius;
+            /*transition-delay: 500ms;*/
+            transition-duration: 500ms;
+            transition-timing-function: linear;
+        }
+
+        button:hover {
+            background-color: #A30018;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:active {
+            box-shadow: none;
+        }
+
+        /* Les liens
+        - actif -> clic
+        - hover -> survol
+        - visité
+        - focus -> focus
+        - lien -> défaut
+
+        LoVe HAte
+        Link -> Visited -> Hover -> Active
+         */
+
+        a:link {
+            color: #A30018;
+            font-family: sans-serif;
+            text-decoration: none;
+        }
+        a:visited {
+            color: #28546a;
+        }
+        a:hover {
+            cursor: pointer;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+        a:active {
+            border: solid 1px black;
+        }
+
+        img {
+            width: 200px;
+            transition-property: width;
+            transition-duration: 1s;
+            transition-timing-function: steps(2);
+        }
+
+        img:hover {
+            width: 500px;
+        }
+
+        /* les <p> dans .parent */
+        .parent p {
+            color: #28546a;
+            display: none; /* enlever des éléments */
+        }
+        .parent { border: solid }
+        /* les <p> quand .parent est survolée */
+        .parent:hover p {
+            display: block;
+        }
+
+        .toto { font-family: sans-serif}
+        /* les <p> ayant la classe toto */
+        p.toto {text-indent: 40px}
+
+        p.toto::first-letter {
+            font-size: 30px;
+            color: darkviolet;
+        }
+
+        p.toto::first-line {
+            text-decoration: line-through grey;
+        }
+
+        p.toto::selection {
+            background-color: aqua;
+        }
+
+        /*
+        Pseudo Classes / Pseudo Elements
+         */
+
+
+
+
+    </style>
+</head>
+<body>
+
+<h1>Les Pseudos Classes</h1>
+
+<button>Ne cliquez pas ici !</button>
+
+<p>Ne suivez pas ce <a href="#">lien !!!</a> </p>
+
+<div>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRET2BpSiCmx9IyWsc5vVKVrMuz9ZumBhc8JYkRYGsG71xvKalgcifGLdZloKl0ffM_Lpo&usqp=CAU">
+</div>
+
+<div class="parent toto"> Ma Div
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque harum ipsam itaque, necessitatibus nobis quibusdam sequi ullam unde? Doloribus eaque error iste non numquam pariatur porro provident reiciendis totam voluptates.</p>
+    <p class="toto">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque harum ipsam itaque, necessitatibus nobis quibusdam sequi ullam unde? Doloribus eaque error iste non numquam pariatur porro provident reiciendis totam voluptates.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque harum ipsam itaque, necessitatibus nobis quibusdam sequi ullam unde? Doloribus eaque error iste non numquam pariatur porro provident reiciendis totam voluptates.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque harum ipsam itaque, necessitatibus nobis quibusdam sequi ullam unde? Doloribus eaque error iste non numquam pariatur porro provident reiciendis totam voluptates.</p>
+</div>
+
+<p class="toto">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias culpa debitis delectus ducimus, eius error eum iure iusto necessitatibus non obcaecati pariatur perferendis possimus quae quisquam soluta tempore voluptatum.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquam asperiores culpa cumque, delectus distinctio ea eum, excepturi exercitationem iure molestias non nulla officia perspiciatis provident reiciendis repellat reprehenderit tempora!
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci alias aperiam consectetur cum ea enim eum illum in iure modi nesciunt nulla quas suscipit, ut vel? Consectetur deleniti modi voluptatum?
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquid, cumque cupiditate eum ex excepturi fugiat ipsam iure porro suscipit tempore, vitae. Hic iure iusto repellat voluptas? In, nulla perferendis?
+</p>
+
+
+
+
+
+</body>
+</html>

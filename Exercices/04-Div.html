@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Festive&display=swap');
+        * { box-sizing: border-box}
+        .card {
+            width: 300px;
+            min-height: 400px;
+            overflow: hidden;
+            box-shadow: 2px 3px 9px #a4a4a499;
+            border-radius: 15px 0;
+            margin: 100px;
+        }
+
+        .card-header {
+            overflow: hidden;
+            height: 180px;
+        }
+
+        .card-header img { width: 100%;}
+
+        .card-body {
+            min-height: 160px;
+            border-bottom: solid 1px #28546a;
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .card-footer {
+            padding-top: 10px;
+            min-height: 60px;
+            text-align: center;
+        }
+
+        .card-footer a {
+            transition: font-size 500ms linear;
+        }
+
+        .card-footer a:link {
+            font-size: 1.2rem;
+            font-family: 'Festive', cursive;;
+            color: #28546a;
+            text-decoration: none;
+        }
+
+        .card-footer a:visited {
+            color: #1c3b4b;
+        }
+
+        .card-footer a:hover {
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .card-body p::first-letter {
+            font-family: 'Festive', cursive;
+            font-size: 1.7em;
+            float: left;
+            margin-right: 4px;
+            margin-bottom: -0.5em;
+        }
+
+        .container {
+            width: 500px;
+            padding: 10px;
+            border: solid;
+        }
+
+        .container img {
+            height: 200px;
+            float: right;
+            margin-left: 10px;
+            margin-bottom: 10px;
+        }
+
+
+    </style>
+</head>
+<body>
+<h1>Titre du site dans la bannière</h1>
+
+<h2>Titre de ma partie</h2>
+
+<article class="card">
+    <div class="card-header">
+        <img src="https://wallpaperaccess.com/full/19546.jpg" alt="description">
+    </div>
+    <div class="card-body">
+        <h3>Titre de ma carte</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+    </div>
+    <div class="card-footer">
+        <a href="#">Lire l'article</a>
+    </div>
+</article>
+
+<article class="card">
+    <div class="card-header">
+        <img src="https://www.wallpapertip.com/wmimgs/44-440782_cosmic-cat-digital-art-cat-galaxy-background.jpg" alt="description">
+    </div>
+    <div class="card-body">
+        <h3>Titre de ma carte</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. sit amet, consectetur adipisicing elit.</p>
+    </div>
+    <div class="card-footer">
+        <a href="#">Lire l'article</a>
+    </div>
+</article>
+
+
+
+<div class="container">
+    <img src="https://ih1.redbubble.net/image.989662559.6744/flat,750x,075,f-pad,750x1000,f8f8f8.jpg">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum iste nam officiis saepe! A adipisci cum distinctio eius exercitationem incidunt iste laudantium, optio, perferendis, provident quisquam repellendus rerum sed vero?
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquam dolores esse minima natus officia quam quo reprehenderit sapiente ut? Consequuntur itaque laboriosam perferendis reprehenderit voluptatum? Delectus natus quae voluptatem?
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ad animi cum expedita fugiat id illo modi quas velit voluptas? Ad ex id, porro quo sed sequi tempora tenetur. Id!
+        Ab consequatur dolorem dolores eaque eius error fugiat impedit, laboriosam nulla optio quibusdam quod similique soluta sunt tempora tempore totam voluptates. Esse.lorem   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae commodi consequatur dolore ducimus eaque explicabo magni mollitia neque non pariatur porro qui quod quos reiciendis reprehenderit, sapiente sequi unde voluptate!</p>
+</div>
+
+</body>
+</html>

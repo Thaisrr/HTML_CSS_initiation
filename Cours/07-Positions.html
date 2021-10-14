@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Les Positions</title>
+    <style>
+        body { height: 200vh;}
+        .container {
+            width: 550px;
+            height: 550px;
+            border: solid black;
+            margin: 200px auto;
+            position: relative;
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            border: solid black;
+        }
+        .b1 {
+            background-color: #A30018;
+            position: static; /* defaut */
+        }
+        .b2 {
+            background-color: goldenrod;
+            position: absolute;
+            /* top ou bottom et/ou left ou right -> x-y  */
+            top: 100px;
+            right: 100px;
+            /*
+            Par défaut  la position absolue :
+            au premier parent en position relative ( par défaut est le document )
+             */
+        }
+        .b3 {
+            background-color: teal;
+            position: relative;
+            left: 50px;
+            bottom: 50px;
+            /* Position relative : l'élément peut se positionner par rapport à lui même,
+            les autres éléments sont toujours au courant de sa présence
+             */
+        }
+        .b4 {
+            background-color: lime;
+            position: fixed;
+            bottom: 100px;
+            right: 100px;
+            /* En position fixed, l'élément se positionne par rapport à la fenêtre, et reste même au scroll
+            Sans coordonnées, il se positionne par rapport à sa position initiale
+            Il sort du parent, retiré du flux, il n'est plus visible par les autres éléments
+             */
+        }
+        .b5 {
+            background-color: purple;
+            position: sticky;
+            top: 0;
+            /* L'élément ne sort pas du flux, il se met à sa position initiale,
+            mais au scroll, il reste positionné sur les coordonnées passées par rapport à la fenêtre
+            Jusqu'à ce que son parent sorte de la fenêtre
+             */
+        }
+
+        .b6 {
+            background-color: tomato;
+            position: fixed;
+            top: 0;
+            left: 300px;
+        }
+
+        .b7 {
+            width: 500px;
+            height: 50px;
+            background-color: #a9dae2;
+        }
+    </style>
+</head>
+<body>
+<div class="box b6">Fixed</div>
+<div class="box b5">Sticky</div>
+<div class="box b7"></div>
+
+
+
+    <div class="container">
+        <div class="box b1"></div>
+        <div class="box b2"></div>
+        <div class="box b3"></div>
+        <div class="box b4"></div>
+        <div class="box b5"></div>
+        <div class="box b1"></div>
+    </div>
+
+</body>
+</html>

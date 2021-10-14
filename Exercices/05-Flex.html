@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Les Flexboxes</title>
+    <style>
+        * {box-sizing: border-box;}
+        body {margin: 0}
+
+
+        main {
+            width: 80%;
+            margin: 40px auto;
+        }
+
+        h1 {
+            border-bottom: solid green 3px
+        }
+
+        .grid {
+            height: 80vh;
+            display: flex;
+            justify-content: space-between; /* alignement horizontal */
+            align-items: stretch; /* alignement vertical */
+        }
+
+        .card {
+            width: 30%;
+            background: #28546a;
+            box-shadow: 2px 2px 7px #a1a1a199;
+        }
+     /*** Navigation ********/
+        nav {
+            width: 100%;
+            background: white;
+            box-shadow: 1px 3px 5px grey;
+            height: 70px;
+            position: sticky;
+            top: 0;
+        }
+
+        .nav-list {
+            height: 100%;
+            width: 80%;
+           list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            margin: 0 auto;
+        }
+
+        .nav-list li{margin-right: 50px;}
+        .nav-list li:last-child { margin-right: 0}
+
+    </style>
+</head>
+<body>
+
+<nav class="nav">
+    <ul class="nav-list">
+        <li>
+            <a class="nav-link" href="#">Lien</a>
+        </li>
+        <li>
+            <a class="nav-link" href="#">Lien</a>
+        </li>
+        <li>
+            <a class="nav-link" href="#">Lien</a>
+        </li>
+    </ul>
+</nav>
+
+<main>
+    <h1>Mes Articles</h1>
+    <div class="grid">
+        <article class="card"></article>
+        <article class="card"></article>
+        <article class="card"></article>
+    </div>
+</main>
+
+</body>
+</html>

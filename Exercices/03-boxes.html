@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Les boxes</title>
+    <style>
+        * {box-sizing: border-box;}
+        body {
+            margin: 0;
+        }
+        header {
+            background-color: goldenrod;
+            height: 5vh;
+        }
+
+        main {
+            background-color: #a9dae2;
+            height: 90vh ;
+            padding-top: 50px;
+
+        }
+
+        footer {
+            background-color: darkcyan;
+            height: 5vh ;
+        }
+
+        .box {
+            width: 20vw;
+            height: 20vw;
+            background-color: teal;
+            border: goldenrod solid;
+            border-radius : 20px;
+            padding: calc( 5vw - 2em );
+            color: white;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 30px;
+        }
+
+    </style>
+</head>
+<body>
+
+<header></header>
+<main>
+    <div class="box">Hello World</div>
+    <div class="box">Hello World</div>
+    <div class="box">Hello World</div>
+</main>
+<footer></footer>
+
+</body>
+</html>

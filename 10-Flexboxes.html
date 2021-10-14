@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Les Flexboxes</title>
+    <style>
+        /*
+        Les flexboxes permettent à un PARENT de gérer la disposition de ses enfants
+
+        */
+
+        /* Tous les enfants direct de body */
+        body>* {
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .container {
+            width: 80%;
+            height: 200px;
+            margin: 50px auto;
+            border: solid;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            /* gérer la direction et le début la boite flex
+            row : ligne, début en haut à gauche
+            row-reverse : ligne, début en haut à droite
+            column: colonne, début en haut à gauche
+            column-reverse: colonne, début en bas à gauche
+             */
+        }
+        /* Justify content : position des enfants dans l'axe de direction de la boîte flex
+             start : enfants collés au début de la boîte
+             end: enfants collés à la fin de la boîte ( sans changement d'ordre )
+             center: enfants sont collés au milieu de la boîte
+             space-between : enfants sont étalés sur la longueur / ( hauteur si colonne ) du parent
+                  avec un espace équivalent entre les enfants
+
+        */
+        .c1 { justify-content: start;}
+        .c2 { justify-content: end;}
+        .c3 { justify-content: center;}
+        .c4 {justify-content: space-between;}
+        .c5 {justify-content: space-around;}
+        .c6 {justify-content: space-evenly;}
+
+        /* Align-items : axe perpendiculaire à flex-direction */
+        .c7 {align-items: start}
+        .c8 {align-items: end}
+        .c9 {align-items: center}
+        .c10 {align-items: stretch}
+        .c10 .box {height: auto}
+        .box {
+            width: 100px;
+            border: solid darkgoldenrod;
+            background-color: #28546a;
+            height: 100px;
+            color: white;
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Les Flexboxes</h1>
+
+<h2>Justify-Content</h2>
+<p>Permet de gérer la position des enfants sur l'axe de flex-direction ( défaut, row  - ligne)</p>
+
+<h3>Flex Start</h3>
+
+<div class="container c1">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+</div>
+
+<h3>Flex End</h3>
+
+<div class="container c2">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+</div>
+
+
+<h3>Center</h3>
+
+<div class="container c3">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+</div>
+
+
+<h3>Space Between</h3>
+
+<div class="container c4">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+</div>
+
+<h3>Space Around</h3>
+
+<div class="container c5">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+</div>
+
+<h3>Space Evenly</h3>
+
+<div class="container c6">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+</div>
+
+<h2>Align-items</h2>
+<p>Permet de gérer la disposition des enfants sur l'axe perpendiculaire à l'axe de direction</p>
+<p>( colonne si flex-direction:row; ou ligne si flex-direction: column ) </p>
+
+<h3>Start</h3>
+
+<div class="container c6 c7">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+</div>
+
+<h3>End</h3>
+
+<div class="container c6 c8">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+</div>
+
+<h3>Center</h3>
+
+<div class="container c6 c9">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+</div>
+
+
+<h3>Stretch</h3>
+
+<div class="container c6 c10">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+</div>
+
+</body>
+</html>

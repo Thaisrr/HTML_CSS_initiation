@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Les blocks</title>
+    <style>
+        * {box-sizing: border-box}
+        .box {
+            background-color: goldenrod;
+            border: #A30018 solid;
+            width: 50vw;
+            min-width: 300px;
+            max-width: 600px;
+            /*
+            width : largeur
+            Width : par défaut => la taille du parent = 100%
+            px -> pixels
+            cm ( beurk )
+            % : 100 % = la taille du parent
+            em : taille de caractère : pas adapté sauf situation précises
+            vw : view width ( largeur de la fenêtre ) 100vw = largeur de la fenêtre
+            vh: view height : hauteur de la fenêtre 100vh = la hauteur de la fenêtre
+            vmin : plus petite valeur entre vh et le vw
+            vmax : la plus grande valeur entre vh et vw
+             */
+            min-height: 200px;
+            /*
+            height : hauteur
+            En hauteur, la valeur par défaut est "auto"
+                -> la hauteur s'adapte au contenu
+                -> Si on défini une hauteur fixe, il y a risque de débordement du contenu
+                -> préférer la propriété min-height ( hauteur minimum, qui s'adapte si besoin )
+             - % : attention, si le parent n'a pas de hauteur donnée, les % ne fonctionnent pas
+             car % de auto ne fonctionne pas.
+             */
+        }
+
+        .b2 {
+            background-color: teal;
+            width: 50%;
+            height: 100px;
+        }
+
+        .box3 {
+            width: 300px;
+            height: 300px;
+            border: solid black;
+        }
+
+        .box4 {
+            width: 150px;
+            height: 150px;
+            background-color: teal;
+            border: solid goldenrod;
+        }
+
+        .b3 {
+            margin-left: auto;
+            margin-top: 40px;
+            margin-right: auto;
+            margin-bottom: 40px;
+            /* margin: 40px ; 40px tout autour
+            margin: 40px 30px; 40px haut - bas; 30px droite et gauche
+            margin: 40px 30px 20px; 40 haut; 30 droite gauche; 20 en bas
+            margin: 40px 30px 20px 10px : haut droite bas gauche
+            ( toujours dans le sens des aiguilles d'un montre, en commençant par le top )
+
+            -> pour séparer des éléments d'un même parent
+            -> pour centrer un block : margin auto sur les côtés
+             */
+            padding: 30px;
+        }
+
+        .bb {
+            box-sizing: border-box; /* defaut : content box */
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Les blocks</h1>
+
+    <h2>Hauteurs et largeurs : </h2>
+    <div class="box">
+        <div class="b2"></div>
+   </div>
+
+    <h2>Margins et paddings</h2>
+
+    <div class="box3 ">
+        <div class="box4"></div>
+    </div>
+
+    <div class="box3 b3">
+        <div class="box4 b4"></div>
+    </div>
+
+    <div class="box3 b3 bb">
+        <div class="box4 b4"></div>
+    </div>
+
+<!-- Qu'est-ce que les boxes / blocks ?
+- div, header, footer, main, section, article, ...
+- h1, h2, .. p, ...
+-> Les éléments HTML qui viennent s'empiler comme des légos pour créer la page
+( mais PAS les balises de texte / inline ( span, b, i ... ) ni les médias ( images ), ni les boutons... )
+--->
+
+
+
+
+</body>
+</html>
