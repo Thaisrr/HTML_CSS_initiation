@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Les animations + autres</title>
+    <style>
+        .box {
+            width: 300px;
+            height: 200px;
+            border: solid black;
+            background-color: #1c3b4b;
+            background-image: url("https://www.dhresource.com/0x0/f2/albu/g7/M00/BF/05/rBVaSVsSgy-AePPeAAmkeWzHrL4969.jpg/galaxy-cat-wearing-glasses-animal-oil-painting.jpg");
+            background-size: 40%;
+            background-repeat: no-repeat;
+            background-position: 95% 100%;
+        }
+
+        .b2 {
+            background: rgb(238,174,202);
+            background: -moz-linear-gradient(167deg, rgba(238,174,202,1) 13%, rgba(238,174,202,1) 22%, rgba(43,96,179,1) 46%, rgba(21,26,32,1) 60%, rgba(21,26,32,1) 67%, rgba(21,26,32,1) 79%);
+            background: -webkit-linear-gradient(167deg, rgba(238,174,202,1) 13%, rgba(238,174,202,1) 22%, rgba(43,96,179,1) 46%, rgba(21,26,32,1) 60%, rgba(21,26,32,1) 67%, rgba(21,26,32,1) 79%);
+            background: linear-gradient(167deg, rgba(238,174,202,1) 13%, rgba(238,174,202,1) 22%, rgba(43,96,179,1) 46%, rgba(21,26,32,1) 60%, rgba(21,26,32,1) 67%, rgba(21,26,32,1) 79%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#eeaeca",endColorstr="#151a20",GradientType=1);
+        }
+
+
+        .b3 {
+            width: 200px;
+            height: 200px;
+            background-color: #A30018;
+            animation-name: monAnimation;
+            animation-delay: 2s;
+            animation-duration: 1s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-fill-mode: backwards;
+            animation-play-state: paused;
+        }
+
+        .b3:hover {
+            animation-play-state: running;
+        }
+
+        .b4 {
+            width: 200px;
+            height: 200px;
+            animation-name: colors;
+            animation-duration: 5s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+
+            clip-path: polygon(50% 0, 100% 100%,0 100%);
+            /*horizontal (x) -  vertical (y)
+            0% : gauche            haut
+            100%: droite           bas
+             */
+        }
+
+        @keyframes monAnimation {
+            from {
+                width: 200px;
+                height: 200px;
+            }
+            to {
+                width: 800px;
+                height: 800px;
+            }
+        }
+
+        @keyframes colors {
+            0% {
+                background-color: #1c3b4b;
+            }
+
+            25% {
+                background-color: #a9dae2;
+            }
+
+            50% {
+                background-color: darkcyan;
+            }
+
+            75% {
+                background-color: darkgreen;
+            }
+
+            100% {
+                background-color: #1c3b4b;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+
+<div class="box"></div>
+
+<div class="box b2"></div>
+
+<div class="b3"></div>
+
+<div class="b4"></div>
+
+</body>
+</html>
